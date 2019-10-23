@@ -28,7 +28,7 @@ namespace connectionleak
         private static async Task<int> ExecuteScalar(string server, string username, string password)
         {
             int result = -1;
-            string connectionString = $"Data Source={server}}; Initial Catalog = master; pwd={password};user Id={username}";
+            string connectionString = $"Data Source={server}; Initial Catalog = master; pwd={password};user Id={username}";
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 await connection.OpenAsync();
