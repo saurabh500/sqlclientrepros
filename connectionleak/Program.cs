@@ -17,6 +17,10 @@ namespace connectionleak
             for(int i = 0; i < MAX_CONNECTION_COUNT; i++)
             using(SqlConnection connection = new SqlConnection(connectionString)) {
                 connection.Open();
+                using(SqlCommand command = new SqlCommand("select 1", connection)) {
+                    var a =command.ExecuteScalar();
+                    Console.WriteLine(a);
+                }
             }
             Console.WriteLine($"Successfully open {MAX_CONNECTION_COUNT} SqlConnections");
             Console.ReadLine();
