@@ -22,6 +22,7 @@ namespace connectionleak
             Task t  = Task.WhenAll(tasks);
             t.Wait();
             Console.WriteLine($"Successfully open {MAX_CONNECTION_COUNT} SqlConnections");
+            Console.WriteLine("Execute : netstat -nat | grep 1433 to find out the current open outgoing connections. There should be only one connection open and in ESTABLISHED State.");
             Console.ReadLine();
         }
 
