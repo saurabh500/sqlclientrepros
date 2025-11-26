@@ -1,0 +1,26 @@
+# Virtual environment
+venv/
+env/
+*.pyc
+__pycache__/
+
+# Test results
+results/
+test_results/
+*.csv
+*.png
+*.html
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
