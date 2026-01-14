@@ -50,5 +50,7 @@ demobcp/
 .DS_Store
 Thumbs.db
 
-# CSV files (if needed, comment out)
-# *.csv
+# Large CSV files
+finefoodembeddings.csv
+finefoodembeddings.csv_backup
+*.csv
